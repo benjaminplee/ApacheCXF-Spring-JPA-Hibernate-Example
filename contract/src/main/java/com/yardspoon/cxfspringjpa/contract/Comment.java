@@ -2,15 +2,24 @@ package com.yardspoon.cxfspringjpa.contract;
 
 import java.util.Set;
 
+import javax.xml.bind.annotation.*;
+
+@XmlAccessorType(XmlAccessType.FIELD)
 public class Comment {
+
+	@XmlAttribute
 	private Long id;
 
+	@XmlAttribute
 	private Long parentIssueId;
 
+	@XmlAttribute
 	private Long parentCommentId;
 
 	private String text;
 
+	@XmlElementWrapper(name = "comments")
+	@XmlElement(name = "comment")
 	private Set<Comment> comments;
 
 	public Long getId() {

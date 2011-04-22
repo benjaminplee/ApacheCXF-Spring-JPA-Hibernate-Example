@@ -2,14 +2,22 @@ package com.yardspoon.cxfspringjpa.contract;
 
 import java.util.Set;
 
+import javax.xml.bind.annotation.*;
+
+@XmlAccessorType(XmlAccessType.FIELD)
 public class Issue {
 
+	@XmlAttribute
 	private Long id;
 
 	private String description;
 
+	@XmlElementWrapper(name = "comments")
+	@XmlElement(name = "comment")
 	private Set<Comment> comments;
 
+	@XmlElementWrapper(name = "tasks")
+	@XmlElement(name = "task")
 	private Set<Task> tasks;
 
 	public Long getId() {
