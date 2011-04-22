@@ -2,19 +2,10 @@ package com.yardspoon.cxfspringjpa.contract;
 
 import java.util.Set;
 
-import javax.persistence.Column;
-import javax.persistence.Entity;
-import javax.persistence.GeneratedValue;
-import javax.persistence.Id;
-
-@Entity
 public class Issue {
 
-	@Id
-	@GeneratedValue
 	private Long id;
 
-	@Column
 	private String description;
 
 	private Set<Comment> comments;
@@ -51,6 +42,11 @@ public class Issue {
 
 	public void setTasks(Set<Task> tasks) {
 		this.tasks = tasks;
+	}
+
+	@Override
+	public String toString() {
+		return "Issue [id=" + id + ", description=" + description + ", comments=" + comments + ", tasks=" + tasks + "]";
 	}
 
 }

@@ -1,6 +1,6 @@
 package com.yardspoon.cxfspringjpa.contract;
 
-import java.util.*;
+import java.util.Date;
 
 public class Task {
 	private Long id;
@@ -31,6 +31,11 @@ public class Task {
 
 	public void setDueDate(Date dueDate) {
 		this.dueDate = dueDate;
+	}
+
+	@Override
+	public String toString() {
+		return "Task [id=" + id + ", workToDo=" + workToDo + ", dueDate=" + dueDate + "]";
 	}
 
 }

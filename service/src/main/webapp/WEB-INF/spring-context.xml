@@ -9,6 +9,6 @@ http://cxf.apache.org/jaxws http://cxf.apache.org/schemas/jaxws.xsd">
 	<import resource="classpath:META-INF/cxf/cxf-extension-soap.xml" />
 	<import resource="classpath:META-INF/cxf/cxf-servlet.xml" />
 
-	<!--<jaxws:endpoint id="NodeService" implementor="yardspoon.server.NodeServiceServer" address="/ws/Node" />-->	
+	<jaxws:endpoint id="PersistenceService" implementor="com.yardspoon.cxfspringjpa.service.PersistenceServiceImpl" address="/services/Persistence" />	
 
 </beans>
