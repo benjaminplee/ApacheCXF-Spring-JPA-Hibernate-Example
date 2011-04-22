@@ -1,0 +1,10 @@
+apply plugin: 'java'
+apply plugin: 'eclipse'
+
+sourceCompatibility = 1.5
+
+jar {
+    manifest {
+        attributes 'Implementation-Title': 'Apache CXF, Spring, JPA Example Service Contract'
+    }
+}

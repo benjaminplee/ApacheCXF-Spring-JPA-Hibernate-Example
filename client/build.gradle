@@ -1,0 +1,13 @@
+apply plugin: 'java'
+apply plugin: 'eclipse'
+
+jar {
+    manifest {
+        attributes 'Implementation-Title': 'Apache CXF, Spring, JPA Example Service Client'
+    }
+}
+
+dependencies {
+    compile group: 'org.springframework', name: 'spring-core', version: '3.0.5.RELEASE'
+    compile project(':contract')
+}
