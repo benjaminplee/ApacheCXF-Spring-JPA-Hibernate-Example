@@ -1,5 +1,6 @@
-apply plugin: 'java'
+apply plugin: 'war'
 apply plugin: 'eclipse'
+apply plugin: 'jetty'
 
 jar {
     manifest {
@@ -8,6 +9,10 @@ jar {
 }
 
 dependencies {
+	compile group: 'javax.servlet', name: 'servlet-api', version: '2.5' 
+	compile group: 'org.apache.cxf', name: 'cxf-rt-frontend-jaxws', version: '2.3.4'
+	compile group: 'org.apache.cxf', name: 'cxf-rt-transports-http', version: '2.3.4'
     compile group: 'org.springframework', name: 'spring-core', version: '3.0.5.RELEASE'
+    compile group: 'org.hibernate', name: 'hibernate-core', version: '3.6.3.Final'
     compile project(':contract')
 }

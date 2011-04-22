@@ -8,3 +8,7 @@ jar {
         attributes 'Implementation-Title': 'Apache CXF, Spring, JPA Example Service Contract'
     }
 }
+
+dependencies {
+	compile group: 'org.hibernate.javax.persistence', name: 'hibernate-jpa-2.0-api', version: '1.0.0.Final'
+}

@@ -1,19 +1,15 @@
-apply plugin: 'java'
-apply plugin: 'eclipse'
+subprojects {
+    apply plugin: 'java'
+    apply plugin: 'eclipse'
 
-sourceCompatibility = 1.5
-version = '1.0'
-
-jar {
-    manifest {
-        attributes 'Implementation-Title': 'Apache CXF, Spring, JPA Example', 'Implementation-Version': version
+    repositories {
+       mavenCentral()
+       mavenRepo urls: "https://repository.jboss.org/nexus/content/repositories/releases/"
     }
-}
 
-repositories {
-    mavenCentral()
-}
-
-dependencies {
-    compile group: 'org.springframework', name: 'spring-core', version: '3.0.5.RELEASE'
+    jar {
+        manifest.attributes provider: 'gradle',
+        					    author: 'Benjamin Lee',
+        						'Implementation-Version': '1.0'
+    }
 }
