@@ -55,7 +55,6 @@ public class Comment {
 
 	@Override
 	public String toString() {
-		return "Comment [id=" + id + ", parentIssueId=" + parentIssueId + ", parentCommentId=" + parentCommentId + ", text=" + text + ", comments=" + comments
-				+ "]";
+		return "Comment [id=" + id + ", parentIssueId=" + parentIssueId + ", parentCommentId=" + parentCommentId + ", text=" + text + ", comments=" + comments + "]";
 	}
 }
